@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catering Healthy Oriental - Proposition Professionnelle</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* Fonts */
+body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg,#fdfaf3 0%,#f8f4e6 100%); color:#5a4a3f; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-handwriting { font-family: 'Dancing Script', cursive; }
+
+/* VIP Luxury Header */
+.title-gold {
+    background: linear-gradient(90deg,#bfa06f 0%,#d4af37 50%,#c0a060 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.header-paragraph { margin-top: 1rem; margin-bottom: 2rem; font-size: 1.25rem; color:#5a4a3f; }
+header { padding: 2rem 0; border-radius: 4rem; }
+
+/* Common Styles */
+.card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+
+/* VIP Luxury Boxes */
+.luxury-box { background: #fefbf3; border: 1px solid #bfa06f; border-radius: 2rem; padding:2rem; }
+.section-title { color:#c0a060; font-size:2rem; }
+.box-title { color:#bfa06fb8; }
+.text-luxury { color:#5a4a3f; }
+.bg-luxury-gradient { background: linear-gradient(to bottom right,#fefbf3,#fdf9f0); }
+
+/* Buttons */
+.btn-gold { background: linear-gradient(90deg,#bfa06f,#d4af37); color:white; text-decoration:none; display:inline-block; }
+.btn-gold:hover { background: linear-gradient(90deg,#d4af37,#bfa06f); }
+
+/* Lists */
+.list-luxury li::marker { color:#bfa06f; font-weight:bold; }
+
+</style>
+</head>
+<body class="min-h-full">
+
+<main class="container mx-auto px-4 py-8 max-w-4xl relative z-10">
+
+<!-- Header -->
+<header class="text-center mb-16">
+    <h1 class="font-handwriting text-6xl md:text-7xl font-bold title-gold leading-tight md:leading-snug mb-8">
+        Catering Healthy Oriental
+    </h1>
+    <p class="header-paragraph">
+        3 jours de cuisine méditerranéenne authentique
+    </p>
+    <div class="w-24 h-1 bg-gradient-to-r from-[#bfa06f] to-[#d4af37] mx-auto mt-2 rounded-full"></div>
+</header>
+
+
+<!-- Presentation -->
+<section class="luxury-box card-shadow hover-lift mb-8">
+    <h2 class="font-playfair text-3xl font-semibold section-title mb-4">Présentation</h2>
+    <p class="text-luxury leading-relaxed text-lg">
+        Je propose une cuisine maison, inspirée de la gastronomie libanaise et méditerranéenne, saine et équilibrée. Je m'occupe des courses, de la préparation des repas directement chez vous et du rangement après chaque service. Les portions sont généreuses, souvent avec des restes pour le lendemain, ce qui rend le service pratique et économique.
+    </p>
+</section>
+
+<!-- Menu Section -->
+<section class="luxury-box card-shadow hover-lift mb-8">
+    <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Menu proposé</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+        <!-- Jour 1 -->
+        <div class="luxury-box hover-lift">
+            <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 1</h3>
+            <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
+            <p class="text-luxury text-sm mb-2">Taboulé libanais + Houmous + Légumes grillés & pain pita complet</p>
+            <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
+            <p class="text-luxury text-sm">Kebbeh bil saniyeh au bœuf + Salade fattouche</p>
+        </div>
+        <!-- Jour 2 -->
+        <div class="luxury-box hover-lift">
+            <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 2</h3>
+            <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
+            <p class="text-luxury text-sm mb-2">Moutabbal + Boulghour bel tomate + Pois chiches rôtis au cumin</p>
+            <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
+            <p class="text-luxury text-sm">Lahme grillée + Purée de patates douces & légumes vapeur</p>
+        </div>
+        <!-- Jour 3 -->
+        <div class="luxury-box hover-lift">
+            <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 3</h3>
+            <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
+            <p class="text-luxury text-sm mb-2">Salade orientale de lentilles corail + Houmous</p>
+            <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
+            <p class="text-luxury text-sm">Filet de poisson au sumac et herbes fraîches + Riz au vermicelle + Légumes sautés</p>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="luxury-box card-shadow hover-lift mb-8">
+    <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Tarif</h2>
+    <div class="bg-luxury-gradient rounded-xl p-6 border-l-2 border-[#bfa06f] flex flex-col md:flex-row md:justify-between items-start md:items-center">
+        <div>
+            <p class="text-lg font-semibold text-luxury mb-2">
+                Forfait 3 jours, midi + soir, portions généreuses, courses incluses
+            </p>
+            <p class="text-sm text-luxury">
+                Équivaut à environ 40 € / repas, moins cher qu'Uber Eats mais avec une qualité maison supérieure
+            </p>
+        </div>
+        <div class="mt-4 md:mt-0">
+            <span class="text-4xl font-bold box-title">400 €</span>
+            <span class="text-lg text-luxury ml-2">TTC</span>
+        </div>
+    </div>
+</section>
+
+<!-- Conditions Section -->
+<section class="luxury-box card-shadow hover-lift mb-8">
+    <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Conditions</h2>
+    <ul class="list-disc list-inside list-luxury space-y-2 text-luxury">
+        <li>Organisation flexible selon vos préférences alimentaires</li>
+        <li>Préparation sur place + rangement inclus</li>
+        <li>Facturation forfaitaire pour 3 jours, possibilité de prolonger à 5 ou 7 jours avec tarif dégressif</li>
+    </ul>
+</section>
+
+<!-- Contact Section -->
+<section class="luxury-box card-shadow hover-lift mb-8">
+    <h2 class="font-playfair text-3xl font-semibold section-title mb-6 text-center">Contact</h2>
+    <p class="text-center text-luxury mb-2">Téléphone : 06 35 57 34 62</p>
+    <p class="text-center text-luxury mb-2">Email : syamestacion@gmail.com</p>
+    <p class="text-center text-sm text-luxury italic mt-4">
+        Note : Les menus peuvent être adaptés selon vos goûts, allergies ou régimes particuliers.
+    </p>
+</section>
+
+<!-- Call to Action -->
+<div class="text-center mt-12">
+    <a href="tel:0635573462" class="btn-gold font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 card-shadow">
+        Réserver maintenant 
+    </a>
+</div>
+
+</main>
+</body>
+</html>

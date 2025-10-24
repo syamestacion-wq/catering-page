@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catering Healthy Oriental - Proposition Professionnelle</title>
+<title>Cuisine Méditerranéenne Signature - Proposition VIP</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
@@ -13,27 +13,23 @@ body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg,#fdf
 .font-playfair { font-family: 'Playfair Display', serif; }
 .font-handwriting { font-family: 'Dancing Script', cursive; }
 
-/* VIP Luxury Header */
+/* VIP Header */
 .title-gold {
     background: linear-gradient(90deg,#bfa06f 0%,#d4af37 50%,#c0a060 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
-.header-paragraph { margin-top: 1rem; margin-bottom: 2rem; font-size: 1.25rem; color:#5a4a3f; }
-header { padding: 2rem 0; border-radius: 4rem; }
+.text-luxury { color:#5a4a3f; }
+.header-paragraph { margin-top: 1rem; margin-bottom: 2rem; font-size: 1.25rem; }
 
-/* Common Styles */
+/* Boxes & Shadows */
 .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
 .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
-
-/* VIP Luxury Boxes */
 .luxury-box { background: #fefbf3; border: 1px solid #bfa06f; border-radius: 2rem; padding:2rem; }
 .section-title { color:#c0a060; font-size:2rem; }
 .box-title { color:#bfa06fb8; }
-.text-luxury { color:#5a4a3f; }
-.bg-luxury-gradient { background: linear-gradient(to bottom right,#fefbf3,#fdf9f0); }
 
 /* Buttons */
 .btn-gold { background: linear-gradient(90deg,#bfa06f,#d4af37); color:white; text-decoration:none; display:inline-block; }
@@ -44,26 +40,29 @@ header { padding: 2rem 0; border-radius: 4rem; }
 
 </style>
 </head>
-<body class="min-h-full bg-gradient-to-br from-[#f8f4e6] to-[#f0ede2]">
+<body class="min-h-full">
 
-<main class="container mx-auto px-4 py-8 max-w-4xl relative z-10 overflow-visible">
+<main class="container mx-auto px-4 py-8 max-w-4xl relative z-10">
 
 <!-- Header -->
-<header class="text-center mb-16 pt-20 overflow-visible">
-    <h1 class="font-handwriting text-5xl md:text-6xl font-bold title-gold leading-[1.2]">
+<header class="text-center mb-16 pt-24 pb-12 overflow-visible">
+    <h1 class="font-handwriting text-4xl md:text-5xl lg:text-6xl font-bold title-gold leading-snug drop-shadow-xl">
         Cuisine Méditerranéenne Signature
     </h1>
-    <p class="text-xl text-luxury font-light mt-6">
-        Voyage gourmand méditerranéen, sain et raffiné.
+    <p class="text-xl md:text-2xl text-luxury font-light mt-6">
+        Voyage gourmand méditerranéen, sain et raffiné
     </p>
-    <div class="w-24 h-1 bg-gradient-to-r from-[#bfa06f] to-[#d4af37] mx-auto mt-6 rounded-full"></div>
+    <div class="w-28 h-1 bg-gradient-to-r from-[#bfa06f] via-[#d4af37] to-[#c0a060] mx-auto mt-6 rounded-full shadow-md"></div>
 </header>
 
-<!-- Presentation -->
+<!-- Présentation -->
 <section class="luxury-box card-shadow hover-lift mb-8">
     <h2 class="font-playfair text-3xl font-semibold section-title mb-4">Présentation</h2>
     <p class="text-luxury leading-relaxed text-lg">
-Je vous propose une cuisine maison, inspirée de la gastronomie libanaise et méditerranéenne, alliant authenticité, raffinement et équilibre. Je prends en charge l’intégralité du service : les courses, la préparation des plats directement chez vous, ainsi que le rangement après chaque service. Les portions sont généreuses et soigneusement préparées pour être dégustées sur place ou savourées ultérieurement, offrant une expérience pratique, raffinée et pleinement satisfaisante.</p>        
+        Je vous propose une cuisine maison, inspirée de la gastronomie libanaise et méditerranéenne, alliant authenticité, raffinement et équilibre. 
+        Je prends en charge l’intégralité du service : les courses, la préparation des plats directement chez vous, ainsi que le rangement après chaque service. 
+        Les portions sont généreuses et soigneusement préparées pour être dégustées sur place ou savourées ultérieurement, offrant une expérience pratique, raffinée et pleinement satisfaisante.
+    </p>        
 </section>
 
 <!-- Menu Section -->
@@ -100,7 +99,7 @@ Je vous propose une cuisine maison, inspirée de la gastronomie libanaise et mé
 <!-- Pricing Section -->
 <section class="luxury-box card-shadow hover-lift mb-8">
     <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Tarif</h2>
-    <div class="bg-luxury-gradient rounded-xl p-6 border-l-2 border-[#bfa06f] flex flex-col md:flex-row md:justify-between items-start md:items-center">
+    <div class="bg-gradient-to-br from-[#fefbf3] to-[#fdf9f0] rounded-xl p-6 border-l-2 border-[#bfa06f] flex flex-col md:flex-row md:justify-between items-start md:items-center">
         <div>
             <p class="text-lg font-semibold text-luxury mb-2">
                 Forfait 3 jours, midi + soir, portions généreuses, courses incluses
@@ -139,7 +138,7 @@ Je vous propose une cuisine maison, inspirée de la gastronomie libanaise et mé
 <!-- Call to Action -->
 <div class="text-center mt-12">
     <a href="tel:0635573462" class="btn-gold font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 card-shadow">
-        Réserver maintenant 
+        Réserver maintenant
     </a>
 </div>
 

@@ -21,7 +21,6 @@ body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg,#fdf
     text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 .text-luxury { color:#5a4a3f; }
-.header-paragraph { margin-top: 1rem; margin-bottom: 2rem; font-size: 1.25rem; }
 
 /* Boxes & Shadows */
 .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
@@ -38,110 +37,157 @@ body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg,#fdf
 /* Lists */
 .list-luxury li::marker { color:#bfa06f; font-weight:bold; }
 
+/* Dark Mode */
+body.dark {
+  background: #110b28 !important;
+  color: #ffffff !important;
+}
+body.dark .luxury-box,
+body.dark [class*="bg-gradient"] {
+  background: #2c2c2c55 !important;
+  border-color: #d1daf2e5 !important;
+}
+body.dark .title-gold {
+  -webkit-text-fill-color: #f5d16b !important;
+}
+body.dark .section-title,
+body.dark .box-title {
+  color: #f5d16b !important;
+}
+body.dark .text-luxury {
+  color: #ffffff !important;
+}
+body.dark .btn-gold {
+  background: #bfa06f !important;
+  color: #1a1a1a !important;
+}
+body.dark .list-luxury li::marker {
+  color: #f5d16b !important;
+}
+
+/* Smooth transition */
+body, .luxury-box, .btn-gold, [class*="bg-gradient"] {
+  transition: all 0.3s ease;
+}
 </style>
 </head>
 <body class="min-h-full">
 
-<main class="container mx-auto px-4 py-8 max-w-4xl relative z-10">
+<main class="container mx-auto px-4 py-8 max-w-4xl relative z-10 overflow-visible">
 
-<header class="text-center mb-16 pt-28 pb-28 relative">
-    <h1 class="font-handwriting text-5xl md:text-6xl lg:text-7xl font-bold title-gold leading-none relative z-10" style="line-height: 1.4;">
-        Cuisine Méditerranéenne Signature
-    </h1>
-    <p class="text-xl text-luxury font-light mt-8 relative z-10">
-        Voyage gourmand, sain et raffiné.
-    </p>
-    <div class="w-24 h-1 bg-gradient-to-r from-[#bfa06f] to-[#d4af37] mx-auto mt-6 rounded-full relative z-10"></div>
-</header>
+  <!-- Bouton Mode Nuit -->
+  <div class="text-right mb-4">
+    <button id="darkModeToggle" class="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">
+      🌙 Mode Nuit
+    </button>
+  </div>
 
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if(document.body.classList.contains('dark')){
+        toggle.innerHTML = '☀️ Mode Jour';
+      } else {
+        toggle.innerHTML = '🌙 Mode Nuit';
+      }
+    });
+  </script>
 
+  <!-- Header -->
+  <header class="text-center mb-16 pt-28 pb-28 relative">
+      <h1 class="font-handwriting text-5xl md:text-6xl lg:text-7xl font-bold title-gold leading-none relative z-10" style="line-height: 1.4;">
+          Cuisine Méditerranéenne Signature
+      </h1>
+      <p class="text-xl text-luxury font-light mt-8 relative z-10">
+          Voyage gourmand, sain et raffiné.
+      </p>
+      <div class="w-24 h-1 bg-gradient-to-r from-[#bfa06f] to-[#d4af37] mx-auto mt-6 rounded-full relative z-10"></div>
+  </header>
 
-<!-- Présentation -->
-<section class="luxury-box card-shadow hover-lift mb-8">
-    <h2 class="font-playfair text-3xl font-semibold section-title mb-4">Présentation</h2>
-    <p class="text-luxury leading-relaxed text-lg">
-        Je vous propose une cuisine maison, inspirée de la gastronomie libanaise et méditerranéenne, alliant authenticité, raffinement et équilibre. 
-        Je prends en charge l’intégralité du service : les courses, la préparation des plats directement chez vous, ainsi que le rangement après chaque service. 
-        Les portions sont généreuses et soigneusement préparées pour être dégustées sur place ou savourées ultérieurement, offrant une expérience pratique, raffinée et pleinement satisfaisante.
-    </p>        
-</section>
+  <!-- Présentation -->
+  <section class="luxury-box card-shadow hover-lift mb-8">
+      <h2 class="font-playfair text-3xl font-semibold section-title mb-4">Présentation</h2>
+      <p class="text-luxury leading-relaxed text-lg">
+          Je vous propose une cuisine maison, inspirée de la gastronomie libanaise et méditerranéenne, alliant authenticité, raffinement et équilibre. 
+          Je prends en charge l’intégralité du service : les courses, la préparation des plats directement chez vous, ainsi que le rangement après chaque service. 
+          Les portions sont généreuses et soigneusement préparées pour être dégustées sur place ou savourées ultérieurement, offrant une expérience pratique, raffinée et pleinement satisfaisante.
+      </p>        
+  </section>
 
-<!-- Menu Section -->
-<section class="luxury-box card-shadow hover-lift mb-8">
-    <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Menu proposé</h2>
-    <div class="grid md:grid-cols-3 gap-6">
-        <!-- Jour 1 -->
-        <div class="luxury-box hover-lift">
-            <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 1</h3>
-            <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
-            <p class="text-luxury text-sm mb-2">Taboulé libanais + Houmous + Légumes grillés & pain pita complet</p>
-            <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
-            <p class="text-luxury text-sm">Kebbeh bil saniyeh au bœuf + Salade fattouche</p>
-        </div>
-        <!-- Jour 2 -->
-        <div class="luxury-box hover-lift">
-            <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 2</h3>
-            <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
-            <p class="text-luxury text-sm mb-2">Moutabbal + Boulghour bel tomate + Pois chiches rôtis au cumin</p>
-            <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
-            <p class="text-luxury text-sm">Lahme grillée + Purée de patates douces & légumes vapeur</p>
-        </div>
-        <!-- Jour 3 -->
-        <div class="luxury-box hover-lift">
-            <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 3</h3>
-            <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
-            <p class="text-luxury text-sm mb-2">Salade orientale de lentilles corail + Mtabal</p>
-            <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
-            <p class="text-luxury text-sm">Filet de poisson au sumac et herbes fraîches + Riz au vermicelle + Légumes sautés</p>
-        </div>
-    </div>
-</section>
+  <!-- Menu Section -->
+  <section class="luxury-box card-shadow hover-lift mb-8">
+      <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Menu proposé</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+          <div class="luxury-box hover-lift">
+              <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 1</h3>
+              <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
+              <p class="text-luxury text-sm mb-2">Taboulé libanais + Houmous + Légumes grillés & pain pita complet</p>
+              <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
+              <p class="text-luxury text-sm">Kebbeh bil saniyeh au bœuf + Salade fattouche</p>
+          </div>
+          <div class="luxury-box hover-lift">
+              <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 2</h3>
+              <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
+              <p class="text-luxury text-sm mb-2">Moutabbal + Boulghour bel tomate + Pois chiches rôtis au cumin</p>
+              <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
+              <p class="text-luxury text-sm">Lahme grillée + Purée de patates douces & légumes vapeur</p>
+          </div>
+          <div class="luxury-box hover-lift">
+              <h3 class="font-playfair text-xl font-semibold box-title mb-4 text-center">Jour 3</h3>
+              <p class="font-semibold text-luxury mb-1">🌅 Déjeuner</p>
+              <p class="text-luxury text-sm mb-2">Salade orientale de lentilles corail + Mtabal</p>
+              <p class="font-semibold text-luxury mb-1">🌙 Dîner</p>
+              <p class="text-luxury text-sm">Filet de poisson au sumac et herbes fraîches + Riz au vermicelle + Légumes sautés</p>
+          </div>
+      </div>
+  </section>
 
-<!-- Pricing Section -->
-<section class="luxury-box card-shadow hover-lift mb-8">
-    <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Tarif</h2>
-    <div class="bg-gradient-to-br from-[#fefbf3] to-[#fdf9f0] rounded-xl p-6 border-l-2 border-[#bfa06f] flex flex-col md:flex-row md:justify-between items-start md:items-center">
-        <div>
-            <p class="text-lg font-semibold text-luxury mb-2">
-                Forfait 3 jours, midi + soir, portions généreuses, courses incluses
-            </p>
-            <p class="text-sm text-luxury">
-                Équivaut à environ 40 € / repas, moins cher qu'Uber Eats mais avec une qualité maison supérieure
-            </p>
-        </div>
-        <div class="mt-4 md:mt-0">
-            <span class="text-4xl font-bold box-title">400 €</span>
-            <span class="text-lg text-luxury ml-2">TTC</span>
-        </div>
-    </div>
-</section>
+  <!-- Pricing Section -->
+  <section class="luxury-box card-shadow hover-lift mb-8">
+      <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Tarif</h2>
+      <div class="bg-gradient-to-br from-[#fefbf3] to-[#fdf9f0] rounded-xl p-6 border-l-2 border-[#bfa06f] flex flex-col md:flex-row md:justify-between items-start md:items-center">
+          <div>
+              <p class="text-lg font-semibold text-luxury mb-2">
+                  Forfait 3 jours, midi + soir, portions généreuses, courses incluses
+              </p>
+              <p class="text-sm text-luxury">
+                  Équivaut à environ 40 € / repas, moins cher qu'Uber Eats mais avec une qualité maison supérieure
+              </p>
+          </div>
+          <div class="mt-4 md:mt-0">
+              <span class="text-4xl font-bold box-title">400 €</span>
+              <span class="text-lg text-luxury ml-2">TTC</span>
+          </div>
+      </div>
+  </section>
 
-<!-- Conditions Section -->
-<section class="luxury-box card-shadow hover-lift mb-8">
-    <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Conditions</h2>
-    <ul class="list-disc list-inside list-luxury space-y-2 text-luxury">
-        <li>Organisation flexible selon vos préférences alimentaires</li>
-        <li>Préparation sur place + rangement inclus</li>
-        <li>Facturation forfaitaire pour 3 jours, possibilité de prolonger à 5 ou 7 jours avec tarif dégressif</li>
-    </ul>
-</section>
+  <!-- Conditions Section -->
+  <section class="luxury-box card-shadow hover-lift mb-8">
+      <h2 class="font-playfair text-3xl font-semibold section-title mb-6">Conditions</h2>
+      <ul class="list-disc list-inside list-luxury space-y-2 text-luxury">
+          <li>Organisation flexible selon vos préférences alimentaires</li>
+          <li>Préparation sur place + rangement inclus</li>
+          <li>Facturation forfaitaire pour 3 jours, possibilité de prolonger à 5 ou 7 jours avec tarif dégressif</li>
+      </ul>
+  </section>
 
-<!-- Contact Section -->
-<section class="luxury-box card-shadow hover-lift mb-8">
-    <h2 class="font-playfair text-3xl font-semibold section-title mb-6 text-center">Contact</h2>
-    <p class="text-center text-luxury mb-2">Téléphone : 06 35 57 34 62</p>
-    <p class="text-center text-luxury mb-2">Email : syamestacion@gmail.com</p>
-    <p class="text-center text-sm text-luxury italic mt-4">
-        Note : Les menus peuvent être adaptés selon vos goûts, allergies ou régimes particuliers.
-    </p>
-</section>
+  <!-- Contact Section -->
+  <section class="luxury-box card-shadow hover-lift mb-8">
+      <h2 class="font-playfair text-3xl font-semibold section-title mb-6 text-center">Contact</h2>
+      <p class="text-center text-luxury mb-2">Téléphone : 06 35 57 34 62</p>
+      <p class="text-center text-luxury mb-2">Email : syamestacion@gmail.com</p>
+      <p class="text-center text-sm text-luxury italic mt-4">
+          Note : Les menus peuvent être adaptés selon vos goûts, allergies ou régimes particuliers.
+      </p>
+  </section>
 
-<!-- Call to Action -->
-<div class="text-center mt-12">
-    <a href="tel:0635573462" class="btn-gold font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 card-shadow">
-        Réserver maintenant
-    </a>
-</div>
+  <!-- Call to Action -->
+  <div class="text-center mt-12">
+      <a href="tel:0635573462" class="btn-gold font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 card-shadow">
+          Réserver maintenant 
+      </a>
+  </div>
 
 </main>
 </body>
